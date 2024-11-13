@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="site-logo" href="index.html">Learnify</a></li>
+                <li><a href="homepage.html"><b>Home</b></a></li>
+                <li><a href="realCourses.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="pro.html">PRO</a></li>
+                <li id="loginLink">
+                    <a class="nav-link btn btn-warning text-light" href="login.html">Login</a>
+                </li>
+                <li id="logoutSection" style="display: none;">
+                    <button onclick="logout()">Logout</button>
+                </li>
+                <li>
+                    <button id="mode-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Signup Form -->
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+        // Toggle Login/Logout Links Based on Login Status
+        function checkLoginStatus() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (user) {
+                document.getElementById('loginLink').style.display = 'none';
+                document.getElementById('logoutSection').style.display = 'block';
+            } else {
+                document.getElementById('loginLink').style.display = 'block';
+                document.getElementById('logoutSection').style.display = 'none';
+            }
+        }
+
+        // Logout Functionality
+        function logout() {
+            localStorage.removeItem('user');
+            alert('Logged out successfully.');
+            checkLoginStatus();
+        }
+
+        // Signup Form Submission and Validation
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Validate email format
+            if (!emailPattern.test(email)) {
+                alert('Invalid email format.');
+                return;
+            }
+
+            // Validate password complexity
+            if (!passwordPattern.test(password)) {
+                alert('Password must be at least 8 characters long, and include uppercase, lowercase letters, a number, and a special character.');
+                return;
+            }
+
+            // Store user information in localStorage
+            localStorage.setItem('user', JSON.stringify({ name, email, password }));
+            alert('Account created successfully! Please log in.');
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+
+        // Check login status on page load
+        checkLoginStatus();
+    </script>
+    <script src="themeToggle.js"></script>
+</body>
+</html>

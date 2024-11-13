@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - PRO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="propage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="app.js"></script>
+    <script src="themeToggle.js" defer></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="site-logo" href="index.html">Learnify</a></li>
+                <li><a href="homepage.html"><b>Home</b></a></li>
+                <li><a href="realCourses.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="pro.html">PRO</a></li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning text-light" href="login.html">login</a>
+                    <div id="userSection">
+                    <li id="logoutSection" style="display: none;">
+            <button onclick="logout()">Logout</button>
+        </li>
+                </div>
+                <li>
+                <button id="mode-toggle" class="ripple-button" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- pro.html -->
+<section class="pro-section">
+    <div class="pro-description">
+        <h1>PLAN - $29/month</h1>
+        <ul>
+            <li>Unlimited access to PRO courses</li>
+            <li>Quizzes with hand-picked meme prizes</li>
+            <li>Invite to private Discord chat</li>
+            <li>30-day moneyback guarantee</li>
+            <li>Free Random MERCH mailed to your door</li>
+        </ul>
+        <button id="subscribeButton" class="ripple-button">Subscribe</button>
+
+        <h2>LIFETIME - $399</h2>
+        <ul>
+            <li>All PRO-tier benefits</li>
+            <li>Single payment, lifetime access</li>
+            <li>Invite to private Discord chat</li>
+            <li>30-day moneyback guarantee</li>
+            <li>Next Level T-shirt shipped worldwide!</li>
+        </ul>
+        <button id="lifetimeButton" class="ripple-button">Upgrade for Life</button>
+    </div>
+</section>
+
+<script>
+    document.getElementById("subscribeButton").addEventListener("click", () => {
+        localStorage.setItem("subscription", JSON.stringify({
+            type: "Monthly Subscription",
+            price: "$29/month",
+            status: "Active"
+        }));
+        alert("You have successfully subscribed to the Monthly Plan!");
+    });
+
+    document.getElementById("lifetimeButton").addEventListener("click", () => {
+        localStorage.setItem("subscription", JSON.stringify({
+            type: "Lifetime Subscription",
+            price: "$399",
+            status: "Active"
+        }));
+        alert("You have successfully upgraded to the Lifetime Plan!");
+    });
+</script>
+
+    </main>
+
+    
+
+    <script>
+        // Simple Popup for Subscribe Button
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        subscribeBtn.addEventListener('click', () => {
+            alert('Thank you for subscribing!');
+        });
+    </script>
+</body>
+</html>

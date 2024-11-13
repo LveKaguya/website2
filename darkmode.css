@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Light Mode Styles */
+body {
+    background-color: #ffffff; /* Light background */
+    color: #333333; /* Dark text color */
+}
+
+header {
+    background-color: #f8f9fa; /* Light header background */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: #333333; /* Dark link color */
+}
+
+footer {
+    background-color: #f8f9fa; /* Light footer background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #222222; /* Dark background */
+    color: #eaeaea; /* Light text color */
+}
+
+header.dark {
+    background-color: #121212; /* Dark header background */
+}
+
+header.dark a {
+    color: #eaeaea; /* Light link color in dark mode */
+}
+
+footer.dark {
+    background-color: #121212; /* Dark footer background */
+}
+
+footer.dark p {
+    color: #eaeaea; /* Light footer text */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button.dark-button {
+    background-color: #343a40; /* Dark button background */
+}
+
+button.light-button {
+    background-color: #ffc107; /* Light button background */
+}
+
+button.dark-button:hover,
+button.light-button:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+/* Utility Classes */
+.hidden {
+    display: none; /* For hidden elements */
+}
+
+/* FAQ Section Styles */
+.faq {
+    margin: 15px 0;
+}
+
+.question {
+    cursor: pointer;
+    color: #007bff; /* Link color for questions */
+}
+
+/* Star Ratings */
+.stars {
+    display: flex;
+}
+
+.star {
+    font-size: 30px;
+    color: #FFD700; /* Gold color for stars */
+    cursor: pointer;
+}

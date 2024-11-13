@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learnify - Login</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a class="site-logo" href="index.html">Learnify</a></li>
+                    <li><a href="homepage.html"><b>Home</b></a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="pro.html">PRO</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning text-light" href="login.html">login</a>
+                        <div id="userSection">
+                            <li id="logoutSection" style="display: none;">
+                                <button onclick="logout()">Logout</button>
+                            </li>
+                        <li><a href="signIn.html">Sign In</a></li>
+                    </div>
+                    <li>
+                    <button class="ripple-button" id="mode-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="loginEmail" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" required>
+                
+                <button type="submit">Log In</button>
+            </form>
+            <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                const storedUser = JSON.parse(localStorage.getItem('user'));
+                
+                if (storedUser && storedUser.email === email && storedUser.password === password) {
+                    localStorage.setItem('loggedInUser', email); // Store login status with user's email
+                    alert('Login successful!');
+                    window.location.href = 'profile.html'; // Redirect to profile page
+                } else {
+                    alert('Incorrect email or password.');
+                }
+            });
+        </script>
+        <script src="app.js"></script>
+        <script src="themeToggle.js" defer></script>
+    </body>
+    </html>

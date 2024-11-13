@@ -1,0 +1,29 @@
+/* Profile page styling */
+#subscriptionDetails, #paymentForm {
+    margin-top: 20px;
+}
+
+#paymentForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#paymentForm input {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+#paymentForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#paymentForm button:hover {
+    background-color: #0056b3;
+}

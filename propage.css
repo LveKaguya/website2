@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212; /* Dark background for dark mode */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Navigation */
+nav {
+    background-color: #333;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.site-logo {
+    font-size: 24px;
+    color: #f8a319;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f8a319;
+}
+
+button {
+    background-color: #f8a319;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d07c19;
+}
+
+/* Pro Section Styles */
+.pro-section {
+    background-color: #222;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.pro-description h1, .pro-description h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f8a319;
+    margin-bottom: 20px;
+}
+
+.pro-description ul {
+    list-style-type: none;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.pro-description ul li {
+    margin: 10px 0;
+}
+
+/* Pricing Cards Styling */
+.pro-description {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.pro-description:hover {
+    transform: scale(1.05);
+}
+
+button.ripple-button {
+    background-color: #f8a319;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.ripple-button:hover {
+    background-color: #d07c19;
+}
+
+/* Light/Dark Mode Toggle Button */
+#mode-toggle {
+    background-color: #f8a319;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#mode-toggle:hover {
+    background-color: #d07c19;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .pro-section {
+        padding: 40px 20px;
+    }
+    
+    .pro-description {
+        padding: 20px;
+    }
+    
+    .pro-description h1, .pro-description h2 {
+        font-size: 30px;
+    }
+
+    .pro-description ul li {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}

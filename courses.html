@@ -1,0 +1,103 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learnify - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a class="site-logo" href="index.html">Learnify</a></li>
+                    <li><a href="homepage.html"><b>Home</b></a></li>
+                    <li><a href="realCourses.html">Courses</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="pro.html">PRO</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning text-light" href="login.html">login</a>
+                        <div id="userSection">
+                            <li id="logoutSection" style="display: none;">
+                                <button onclick="logout()">Logout</button>
+                            </li>
+                    </div>
+                    <li>
+                    <button id="mode-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="course-section">
+                <h1>Welcome to Learnify</h1>
+                <p>Master your coding skills with expert tutorials!</p>
+                <h1 style="font-weight: bolder;">See the abilities of JavaScript - Click the buttons all over this page!</h1>
+                <br>
+            
+                <div class="video-container">
+                    <iframe height="560" src="https://www.youtube.com/embed/lfmg-EJ8gm4" title="YouTube video player" allowfullscreen></iframe>
+                </div>
+
+            <section>
+                <h3>Learn More About JavaScript</h3>
+                <p id="moreText" style="display: none;">JavaScript is a programming language that allows you to implement complex features on web pages. It is essential for modern web development!</p>
+                <button id="readMoreBtn">Read More</button>
+            </section>
+            <br>
+            <button><a href="drum.html">See a game created with JS!</a></button>
+            <br>
+
+            <h2>Greeting App</h2>
+            <button id="greet-btn">Get Greeting</button>
+            <h2 id="greeting-message"></h2>
+            <section class="rating-section">
+                <h3>Rate This Course</h3>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <p id="ratingMessage"></p>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <div class="question">
+                        <h3>What do I need to start this course?</h3>
+                        <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="gray" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>You'll need a basic understanding of HTML and CSS, and the willingness to learn!</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">
+                        <h3>Is this course suitable for beginners?</h3>
+                        <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="gray" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>Yes! This course is designed with beginners in mind and covers all the basics of JavaScript.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Learnify</p>
+        </footer>
+
+        <script src="app.js"></script>
+        <script src="themeToggle.js" defer></script>
+    </body>
+    </html>

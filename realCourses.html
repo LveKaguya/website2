@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List of courses</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <header>
+            <nav>
+                <ul>
+                    <li><a class="site-logo" href="index.html">Learnify</a></li>
+                    <li><a href="homepage.html"><b>Home</b></a></li>
+                    <li><a href="realCourses.html">Courses</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="pro.html">PRO</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning text-light" href="login.html">login</a>
+                        <div id="userSection">
+                            <li id="logoutSection" style="display: none;">
+                                <button onclick="logout()">Logout</button>
+                            </li>
+                    </div>
+                    <li>
+                        <button id="mode-toggle" class="ripple-button" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        #filterInput, #filterTag { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Courses</h1>
+    <input type="text" id="filterInput" placeholder="Search courses by title or description">
+    <select id="filterTag">
+        <option value="">Filter by Tag</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Data Science">Data Science</option>
+        <!-- Add other tags as needed -->
+    </select>
+    
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>People Passed</th>
+                <th>Review</th>
+                <th>Price</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody id="courseList"></tbody>
+    </table>
+        <section class="recommended-books">
+            <h2>Recommended Books</h2>
+            <div id="booksContainer" class="book-list">
+                
+            </div>
+        </section>
+        
+    
+    <script src="booksAPI.js"></script>
+    <script src="courses.js"></script>
+    <script src="themeToggle.js"></script>
+</body>
+</html>

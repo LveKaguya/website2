@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="welcomePage.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="site-logo" href="index.html">Learnify</a></li>
+                <li><a href="homepage.html"><b>Home</b></a></li>
+                <li><a href="realCourses.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="pro.html">PRO</a></li>
+                <li id="loginLink">
+                    <a class="nav-link btn btn-warning text-light" href="login.html">Login</a>
+                </li>
+                <li id="logoutSection" style="display: none;">
+                    <button onclick="logout()">Logout</button>
+                </li>
+                <li>
+                    <button id="mode-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <header class="main-header">
+        <div class="hero-container">
+            <h1>Learn to Code Faster</h1>
+            <p>Blazingly fast & highly-amusing way to level up your programming skills.</p>
+            <a href="#get-started" class="cta-button">Start Here</a>
+        </div>
+    </header>
+
+    <section id="get-started" class="info-section">
+        <h2>Project-Based Learning</h2>
+        <p>Our platform is all about project-based learning with short, highly-focused tutorials.</p>
+        <a href="courses.html" class="cta-button">Explore Courses</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Learnify | All Rights Reserved</p>
+    </footer>
+     <script src="app.js"></script>
+    <script src="themeToggle.js"></script>
+</body>
+</html>
